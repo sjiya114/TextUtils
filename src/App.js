@@ -8,8 +8,7 @@ import Alert from './components/Alert';
 
 import {
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 
