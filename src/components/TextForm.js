@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 export default function TextForm(props) {
-    const[text,setText]=useState('Enter text here');
+    const[text,setText]=useState("Enter text here");
      const handleClick=()=>
         {
             console.log("value updated");

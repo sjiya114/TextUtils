@@ -7,7 +7,6 @@ import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   Link
@@ -15,7 +14,7 @@ import {
 
 
 function App() {
-const[mode,setmode]=useState('light');
+const [mode,setMode]=useState('light');
 const[alert,setalert]=useState(null);
 const showAlert=(message,type)=>
   {
@@ -34,19 +33,18 @@ const toggleMode=()=>
   {
     if(mode==='light')
       {
-        setmode('dark');
+        setMode('dark');
         document.body.style.backgroundColor="#131337";
         showAlert("Dark mode has been enabled","success");
       }
       else{
-        setmode('light');
+        setMode('light');
         document.body.style.backgroundColor="white";
         showAlert("Light mode has been enabled","success");
       }
   }
 return (
 <>
-<Router>
 <Navbar mode={mode} toggleMode={toggleMode}/>
 <Alert alert={alert}/>
 <div className='container'>
@@ -57,7 +55,6 @@ return (
           <TextForm showAlert={showAlert} mode={mode}/>}/>
  </Routes>
 </div>
-</Router>
 </>
 );
 }
